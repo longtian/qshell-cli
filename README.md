@@ -1,5 +1,5 @@
 # qshell-cli
-> 自动安装七牛命令行工具 qshell 到 Node.js 项目的依赖里
+> 自动安装七牛命令行工具 `qshell` 到 `Node.js` 项目的依赖里
 
 ## 安装
 
@@ -9,7 +9,15 @@ npm install qshell-cli --save-dev
 
 ## 使用
 
-修改 `package.json` 
+#### 第 1 种：直接使用原始的 `qshell` 可执行文件
+
+```
+./node_modules/qshell-cli/vendor/qshell -h
+```
+
+#### 第 2 种：推荐在 `NPM Scripts` 中使用，因为 `NPM` 会自动修改 `PATH` 环境变量
+
+要用 `npm run deploy` 的方式上传文件到七牛，可以修改 `package.json` 
 
 ```
 {
@@ -21,6 +29,7 @@ npm install qshell-cli --save-dev
 
 `qiniu.config.js` 是 `qshell` 上传文件的配置文件
 
+## 关于
 
 #### 为什么把 qshell 当成一个 NPM 的依赖
 
