@@ -1,4 +1,9 @@
 # qshell-cli
+[![](https://img.shields.io/npm/v/qshell-cli.svg)](https://www.npmjs.com/package/qshell-cli)
+[![](https://img.shields.io/travis/wyvernnot/qshell-cli.svg)](https://travis-ci.org/wyvernnot/qshell-cli)
+[![](https://img.shields.io/npm/dm/qshell-cli.svg)](http://npm-stat.com/charts.html?package=qshell-cli)
+[![](https://img.shields.io/npm/l/qshell-cli.svg)](https://github.com/wyvernnot/qshell-cli/blob/master/LICENSE)
+
 > 自动安装七牛命令行工具 `qshell` 到 `Node.js` 项目的依赖里
 
 ## 安装
