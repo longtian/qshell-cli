@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var path = require('path')
+var spawn = require('child_process').spawn
+var binPath = path.join(__dirname, '..', 'vendor', 'qshell')
+
+var args = process.argv.slice(2)
+var cp = spawn(binPath, args)
+cp.stdout.pipe(process.stdout)
+cp.stderr.pipe(process.stderr)
+process.stdin.pipe(cp.stdin)
+
+cp.on('error', function (err) {
+  console.error('Error executing qshell at', binPath)
+  console.error(err.stack)
+})
+
+cp.on('exit', function (code) {
+  // Wait few ms for error to be printed.
+  setTimeout(function () {
+    process.exit(code)
+  }, 20)
+})
+
+process.on('SIGTERM', function () {
+  cp.kill('SIGTERM')
+  process.exit(1)
+})

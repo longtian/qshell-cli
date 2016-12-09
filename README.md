@@ -1,24 +1,50 @@
 # qshell-cli
-> 下载七牛命令行到本地。
+> 自动安装七牛命令行工具 qshell 到 Node.js 项目的依赖里
 
-## 为什么有这个项目
+## 安装
 
-主要是受到 [12factor](https://12factor.net/zh_cn/) 的启发
+```
+npm install qshell-cli --save-dev
+```
 
-**显式声明依赖关系**
+## 使用
 
-`qshell` 作为项目部署时的依赖应该显示的声明在 `package.json` 中
-  
-**在环境中存储配置**
+修改 `package.json` 
 
-`qshell` 本身不支持环境变量的方式传递参数
+```
+{
+  "scripts":{
+    "deploy":"qshell qupload qiniu.config.js" 
+  }
+}
+```
+
+`qiniu.config.js` 是 `qshell` 上传文件的配置文件
+
+
+#### 为什么把 qshell 当成一个 NPM 的依赖
+
+像 `qshell` 这样的部署工具一般只有运维人员才会用到，但对于提倡 `DevOps` 文化的团队来说，把部署工具也放进项目依赖里会非常方便。
+这一点也是受到了 [12factor](https://12factor.net/zh_cn/) 里 `显式声明依赖关系` 这一条的启发。
+
+#### 可选使用其它 CDN 地址
+
+默认会从 `http://devtools.qiniu.com/qshell-{version}.zip` 来下载，你也可以使用其它的地址：
+
+```
+npm config qshell_cdnurl='http://10.0.0.1/path/qshell-{version}.zip'
+```
+
+不过 `qshell-cli` 为了保障安全和完整性，压缩包下载完成后会强制做 `md5` 校验，所以请确保使用从七牛官方下载的原始压缩包。
 
 ## Inspired by
 
 https://github.com/Medium/phantomjs/blob/master/install.js
 
-## 下载地址
+## Lincense
 
-http://devtools.qiniu.com/qshell-v1.8.5.zip
+MIT
 
-we <3 Qiu
+--------
+
+We <3 Qiniu

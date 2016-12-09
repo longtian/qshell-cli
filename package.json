@@ -1,0 +1,44 @@
+{
+  "name": "qshell-cli",
+  "version": "1.8.5",
+  "description": "qshell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node ./src/install.js",
+    "eslint": "eslint ./src"
+  },
+  "bin": {
+    "qshell": "./bin/qshell"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyvernnot/qshell-cli.git"
+  },
+  "keywords": [
+    "qiniu",
+    "qshell",
+    "cdn"
+  ],
+  "author": "wyvernnot <wyvernnot@gmail.com> (http://wyvernnot.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyvernnot/qshell-cli/issues"
+  },
+  "homepage": "https://github.com/wyvernnot/qshell-cli#readme",
+  "dependencies": {
+    "extract-zip": "^1.5.0",
+    "md5-file": "^3.1.1",
+    "mkdirp": "^0.5.1",
+    "progress": "^1.1.8",
+    "request": "^2.79.0",
+    "request-progress": "^3.0.0",
+    "yauzl": "^2.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}
