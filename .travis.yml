@@ -3,5 +3,4 @@ node_js:
  - "0.12"
  - "6"
 script:
- - "npm run eslint"
- - "node /src/index.js"
+ - "node /src/install.js"
