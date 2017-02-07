@@ -1,0 +1,13 @@
+{
+  "entriesMap": {
+    "darwin-x86": "qshell_darwin_386",
+    "darwin-x64": "qshell_darwin_amd64",
+    "linux-x86": "qshell_linux_386",
+    "linux-x64": "qshell_linux_amd64",
+    "linux-arm": "qshell_linux_arm",
+    "windows-x86": "qshell_windows_386.exe",
+    "windows-x64": "qshell_windows_amd64.exe"
+  },
+  "defaultCDN": "http://devtools.qiniu.com/qshell-v2.0.2.zip",
+  "md5": "e56f5409c2cea2f646470d1f519ff73e"
+}
