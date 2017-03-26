@@ -1,6 +1,6 @@
 {
   "name": "qshell-cli",
-  "version": "2.0.2",
+  "version": "2.0.5",
   "description": "qshell",
   "main": "index.js",
   "scripts": {
